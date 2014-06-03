@@ -1,0 +1,6 @@
+#base=js
+
+LaunchesAdmin.js
+
+actions/CloneLaunch.js
+actions/PromoteLaunch.js

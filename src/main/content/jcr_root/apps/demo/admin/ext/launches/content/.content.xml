@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:mixinTypes="[sling:VanityPath]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="AEM Launches"
+        sling:resourceType="granite/ui/components/foundation/page"
+        sling:vanityOrder="{Long}301"
+        sling:vanityPath="/launches">
+        <head jcr:primaryType="nt:unstructured">
+            <viewport
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/admin/page/viewport"/>
+            <meta
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/meta"
+                content="chrome=1"
+                name="X-UA-Compatible"/>
+            <title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/siteadmin/admin/page/title"/>
+            <favicon
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/page/favicon"/>
+            <clientlibs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/includeclientlibs"
+                categories="[coralui2,granite.ui.foundation,granite.ui.foundation.admin,apps.launches.admin]"/>
+        </head>
+        <body
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/page/body">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/endor/layouts/page"/>
+            <rail
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/endor/navcolumns"
+                currentId="cq-launches"
+                srcPath="cq/core/content/nav"/>
+            <breadcrumbs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="demo/admin/ext/launches/components/breadcrumbs"
+                depthAdjustment="{Long}-1"
+                rootTitle="Launches"/>
+            <title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/siteadmin/admin/endor/title"
+                contentPath="${requestPathInfo.suffix}"
+                rootTitle="Sites"/>
+            <helpactivator
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/hyperlink"
+                href="#help-popover"
+                text="Help"
+                toggle="popover"/>
+            <badge
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/endor/badge"
+                href="#cq-notifications"/>
+            <user
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/endor/user"
+                href="#granite-user-properties"/>
+            <help
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container"
+                id="help-popover">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/popover"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <list
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/list"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <searchform
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form"
+                                action="http://www.adobe.com/cfusion/search/index.cfm">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/form"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <section
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                        name="siteSection"
+                                        value="marketing-cloud.html"/>
+                                    <term
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        emptyText="Search"
+                                        name="term"/>
+                                </items>
+                            </searchform>
+                            <whatsnew
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/hyperlink"
+                                href_i18n="https://microsite.omniture.com/t2/help/en_US/whatsnew/"
+                                text="What's New">
+                                <layoutConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    interactive="{Boolean}true"/>
+                            </whatsnew>
+                            <aemdoc
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/hyperlink"
+                                href_i18n="https://www.adobe.com/go/aem6_docs"
+                                text="Documentation">
+                                <layoutConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    interactive="{Boolean}true"/>
+                            </aemdoc>
+                            <home
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/hyperlink"
+                                href_i18n="http://microsite.omniture.com/t2/help/en_US/home/"
+                                text="Help Home">
+                                <layoutConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    interactive="{Boolean}true"/>
+                            </home>
+                            <community
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/hyperlink"
+                                href_i18n="http://helpx.adobe.com/marketing-cloud.html"
+                                text="Community">
+                                <layoutConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    interactive="{Boolean}true"/>
+                            </community>
+                            <customercare
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/hyperlink"
+                                href_i18n="http://helpx.adobe.com/marketing-cloud/contact-support.html"
+                                text="Customer Care">
+                                <layoutConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    interactive="{Boolean}true"/>
+                            </customercare>
+                        </items>
+                    </list>
+                </items>
+            </help>
+            <notifications
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/endor/notifications"
+                id="cq-notifications"/>
+            <account
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="granite/ui/content/userproperties"/>
+            <content
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/endor/layouts/content"/>
+                <header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/container">
+                    <layout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/layouts/mode"
+                        group="apps-launches-admin-launches"/>
+                    <items jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/navigation">
+                            <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/endor/layouts/actionbar"/>
+                            <items jcr:primaryType="nt:unstructured">
+                                <toggleselectionmode
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/endor/actionbar/button"
+                                    class="foundation-mode-change"
+                                    foundation-mode-group="apps-launches-admin-launches"
+                                    foundation-mode-value="selection"
+                                    icon="icon-check-circle"
+                                    text="Enter Selection"
+                                    title="Enter Selection"/>
+                                <createlaunch
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/endor/actionbar/button"
+                                    allowEmptySuffix="{Boolean}true"
+                                    href="/libs/wcm/core/content/sites/createlaunchwizard.html"
+                                    icon="icon-add"
+                                    text="Create Launch"
+                                    title="Create Launch">
+                                    <rendercondition
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/renderconditions/privilege"
+                                        path="/content/launches"
+                                        privileges="jcr:addChildNodes"/>
+                                </createlaunch>
+                                <togglelayout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/admin/layouttoggle"
+                                    target=".apps-launches-admin-launches">
+                                    <layoutConfig
+                                        jcr:primaryType="nt:unstructured"
+                                        align="right"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <cards
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/endor/actionbar/button"
+                                            icon="icon-view-card"
+                                            text="List Layout"
+                                            title="Show as List">
+                                            <layout
+                                                jcr:primaryType="nt:unstructured"
+                                                name="foundation-layout-list"/>
+                                        </cards>
+                                        <list
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/endor/actionbar/button"
+                                            icon="icon-view-list"
+                                            text="Card Layout"
+                                            title="Show as Cards">
+                                            <layout
+                                                jcr:primaryType="nt:unstructured"
+                                                name="foundation-layout-card"/>
+                                        </list>
+                                    </items>
+                                </togglelayout>
+                            </items>
+                        </default>
+                        <selection
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/navigation">
+                            <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/endor/layouts/actionbar"/>
+                            <items jcr:primaryType="nt:unstructured">
+                                <toggleselectionmode
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/endor/actionbar/button"
+                                    active="{Boolean}true"
+                                    class="foundation-mode-change"
+                                    foundation-mode-group="apps-launches-admin-launches"
+                                    foundation-mode-value="default"
+                                    icon="icon-close-circle"
+                                    text="Exit Selection Mode"
+                                    title="Exit Selection Mode"/>
+                                <open
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/common/wcm/open"
+                                    class="coral-Button--quiet"
+                                    hideText="{Boolean}true"
+                                    icon="icon-edit"
+                                    rel="apps-launches-admin-edit-activator"
+                                    target=".apps-launches-admin-launches"
+                                    text="Open"
+                                    title="Open"
+                                    variant="[quiet,secondary]"/>
+                                <viewproperties
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/endor/actionbar/button"
+                                    class="foundation-collection-action foundation-admin-properties-activator"
+                                    foundation-admin-properties-activator-action="foundation.normal"
+                                    foundation-collection-action="\{&quot;target&quot;: &quot;.apps-launches-admin-launches&quot;, &quot;activeSelectionCount&quot;: &quot;single&quot;}"
+                                    href="/apps/demo/admin/ext/launches/content/properties.html"
+                                    icon="icon-info-circle"
+                                    rel="apps-launches-admin-actions-properties-activator"
+                                    text="View Properties"
+                                    title="View Properties"/>
+                                <clone
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/endor/actionbar/button"
+                                    class="foundation-collection-action apps-launches-admin-clone-activator"
+                                    foundation-collection-action="\{&quot;target&quot;: &quot;.apps-launches-admin-launches&quot;, &quot;activeSelectionCount&quot;: &quot;multiple&quot;}"
+                                    foundation-mode-group="apps-launches-admin-launches"
+                                    foundation-mode-value="default"
+                                    icon="icon-copy"
+                                    text="Clone"
+                                    title="Clone"/>
+                                <promote
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/endor/actionbar/button"
+                                    class="foundation-collection-action apps-launches-admin-promote-activator"
+                                    foundation-collection-action="\{&quot;target&quot;: &quot;.apps-launches-admin-launches&quot;, &quot;activeSelectionCount&quot;: &quot;single&quot;}"
+                                    foundation-mode-group="apps-launches-admin-launches"
+                                    foundation-mode-value="default"
+                                    icon="icon-promote"
+                                    text="Promote"
+                                    title="Promote"/>
+                                <delete
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/endor/actionbar/hyperlink"
+                                    appendSuffix="{Boolean}false"
+                                    class="foundation-collection-action"
+                                    foundation-collection-action="\{&quot;target&quot;: &quot;.granite-ocs-console-tenants&quot;, &quot;activeSelectionCount&quot;: &quot;single&quot;}"
+                                    hideText="{Boolean}true"
+                                    href="#deletelaunch"
+                                    icon="icon-delete"
+                                    itemscope="itemscope"
+                                    text="Delete Launch"
+                                    title="Delete Launch"
+                                    toggle="modal"/>
+                            </items>
+                        </selection>
+                    </items>
+                </header>
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+                        <launches
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/siteadmin/admin/pages"
+                            datasourceResourceType="demo/admin/ext/launches/components/datasource/launches"
+                            fetchSize="{Long}30"
+                            foundation-mode-group="apps-launches-admin-launches"
+                            itemResourceType="demo/admin/ext/launches/components/launch"
+                            itemscope="itemscope"
+                            rel="apps-launches-admin-launches">
+                            <layout
+                                jcr:primaryType="nt:unstructured"
+                                name="foundation-layout-card"/>
+                            <fields jcr:primaryType="nt:unstructured">
+                                <status jcr:primaryType="nt:unstructured"/>
+                                <lastModified jcr:primaryType="nt:unstructured"/>
+                                <modifiedBy jcr:primaryType="nt:unstructured"/>
+                                <size jcr:primaryType="nt:unstructured"/>
+                            </fields>
+                            <header
+                                jcr:primaryType="nt:unstructured"
+                                class="card-page"
+                                moveable="{Boolean}true"
+                                selectable="{Boolean}true">
+                                <selector
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/siteadmin/admin/pages/headers/selector"/>
+                                <main
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/siteadmin/admin/pages/headers/deflt"
+                                    class="main"
+                                    sort-selector=".label h4"
+                                    title="Title"/>
+                                <modified
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/siteadmin/admin/pages/headers/deflt"
+                                    class="modified"
+                                    sort-attribute="data-timestamp"
+                                    sort-selector=".label .modified .date"
+                                    sort-type="numeric"
+                                    title="Modified"/>
+                                <promoted
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/siteadmin/admin/pages/headers/deflt"
+                                    class="promoted"
+                                    sort-attribute="data-timestamp"
+                                    sort-selector=".label .promoted .date"
+                                    sort-type="numeric"
+                                    title="Promoted"/>
+                            </header>
+                        </launches>
+                        <deletepage
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/siteadmin/admin/actions/deletepage"
+                            id="cq-sites-deletepage"
+                            rel="apps-launches-admin-actions-delete"/>
+                    </items>
+                </content>
+            </content>
+        </body>
+    </jcr:content>
+    <properties/>
+</jcr:root>
