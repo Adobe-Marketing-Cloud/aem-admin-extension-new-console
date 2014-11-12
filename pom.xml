@@ -8,6 +8,18 @@
     <name>Adobe AEM demo for admin extension point: Launches Console</name>
     <version>1.0.0-SNAPSHOT</version>
 
+    <inceptionYear>2014</inceptionYear>
+    <licenses>
+        <license>
+          <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <organization>
+        <name>Adobe</name>
+        <url>http://www.adobe.com/</url>
+    </organization>
+
     <prerequisites>
         <maven>3.0.2</maven>
     </prerequisites>
